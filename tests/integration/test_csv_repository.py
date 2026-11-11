@@ -41,3 +41,24 @@ def test_read_data_raises_for_missing_file(tmp_path: Path) -> None:
         read_data(tmp_path / "missing.csv")
 
 
+def test_notebook_executes_end_to_end_without_error(tmp_path: Path, notebook_path: Path) -> None:
+    copy = tmp_path / notebook_path.name
+    shutil.copy(notebook_path, copy)
+    notebook = nbformat.read(copy, as_version=4)
+
+    client = NotebookClient(
+        notebook,
+        timeout=120,
+        kernel_name="python3",
+        resources={"metadata": {"path": str(tmp_path)}},
+    )
+    client.execute()
+
+    errors = [
+        out
+        for cell in notebook.cells
+        if cell.cell_type == "code"
+        for out in cell.outputs
+        if out.output_type == "error"
+    ]
+    assert errors == []
