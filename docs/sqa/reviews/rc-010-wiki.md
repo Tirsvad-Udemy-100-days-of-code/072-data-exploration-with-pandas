@@ -9,7 +9,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S02 | Initial version | [e6dff98] |
+| 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S02 | Initial version | [e6dff98] |
+| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S02 | Criterion 14 checked on the published wiki; verdict Go | [2646ccf] |
 
 ---
 
@@ -39,22 +40,23 @@
 | 11 | Every page starts with the language line, with the current language in bold and a link to the same page in each other language | Pass | Every page starts with the language line, current language in bold. |
 | 12 | A page in a language other than English is named `<Page>-<code>.md`, with a BCP 47 code; English has no suffix | Pass | Pages are named Page-da.md and Page-ms.md; English has no suffix. |
 | 13 | Code blocks, commands, file names and IDs stay in English in every language | Pass | Code blocks, commands and file names are English in every language. |
-| 14 | The sidebar, every page and every link were checked on the published wiki after the change, not only in the repository | Pending | Pages of the earlier merge were published (11 pages seen through the host API); the new Danish and Bahasa Malaysia Lecture-Steps pages and the final links can only be checked after this change is merged and published. |
+| 14 | The sidebar, every page and every link were checked on the published wiki after the change, not only in the repository | Pass | After the merge the host listed all 13 pages (12 pages and the sidebar); a script read every page through the host API and found no dead link; the step images load. |
 | 15 | A change to the layout rules (sections, order, naming) is made in the generator or template and in this checklist's source rules together | N-A | No layout rule was changed. |
 | 16 | The wiki folder (`docs/wiki/`) is flat: every page, `Home.md` and `_Sidebar.md` included, is directly in it, and languages are told apart by file name, never by a subfolder | Pass | docs/wiki/ is flat; languages are told apart by file name. |
 
 ## Overall Verdict
 
-Go-with-conditions — no Mandatory criterion fails; criterion 14 is Pending until the merged wiki is checked on the host. The stand-in review is not independent and stays open to challenge by S01.
+Go — no Mandatory criterion fails; criterion 14 was checked on the published wiki. The stand-in review is not independent and stays open to challenge by S01.
 
 ## Action Items
 
 | Action | Owner | Due |
 | --- | --- | --- |
-| Check the sidebar, every page and every link on the published wiki after the merge, then set criterion 14 to Pass | S01 | 2026-11-18 |
+| none | - | - |
 
 ---
 
 [WIKI-001]: ../../wiki
 [QC-WIKI-001]: ../../../framework/qc/artifacts/qc-wiki.md
 [e6dff98]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/072-data-exploration-with-pandas/commit/e6dff989dc1db537606da1e3dc3af7814043e032
+[2646ccf]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/072-data-exploration-with-pandas/commit/2646ccf050687d2525f39513505f089a41c557d3
