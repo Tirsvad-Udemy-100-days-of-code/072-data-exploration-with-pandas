@@ -11,7 +11,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | S02 (AI as stand-in) | Initial version | pending |
+| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | S02 (AI as stand-in) | Initial version | [b409b30] |
 
 ---
 ## Purpose and Scope
@@ -40,3 +40,4 @@ The PO language is English (`en`) and the domain is IT (`it`). The dictionary re
 
 [BC-001]: ./business-case.md
 [SA-001]: ./stakeholder-analysis.md
+[b409b30]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/072-data-exploration-with-pandas/commit/b409b30d933875a01860e78a6a26ccda86d6a9b3

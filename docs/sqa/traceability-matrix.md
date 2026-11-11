@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S02 (AI as stand-in) | Initial version | pending |
+| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S02 (AI as stand-in) | Initial version | [b409b30] |
 
 ---
 ## Purpose
@@ -69,3 +69,4 @@ No architecture views, use cases or test plan exist yet; the concerns are covere
 [RC-007]: ./reviews/rc-007-mil-003-documentation.md
 [RC-008]: ./reviews/rc-008-python-mil-001.md
 [PY-001]: ../../src/college_majors
+[b409b30]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/072-data-exploration-with-pandas/commit/b409b30d933875a01860e78a6a26ccda86d6a9b3
