@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "college-majors"
+version = "0.1.0"
+description = "Day 72 of 100 Days of Code: data exploration with pandas on post-university salaries by college major."
+readme = "README.md"
+requires-python = ">=3.13"
+license = "AGPL-3.0-or-later"
+license-files = ["LICENSE"]
+dependencies = ["pandas>=2.2"]
+
+[project.optional-dependencies]
+notebook = ["jupyterlab>=4", "ipykernel>=6", "nbclient>=0.10", "nbformat>=5"]
+dev = ["pytest>=8", "pytest-cov>=5", "nbclient>=0.10", "nbformat>=5", "ipykernel>=6", "pillow>=10", "ruff>=0.6"]
+
+[project.scripts]
+college-majors = "college_majors.presentation.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+college_majors = ["data/*.csv"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+extend-exclude = ["notebooks"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "N", "D", "ANN", "S"]
+ignore = ["D203", "D213"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "S603", "D103", "D100", "D104", "D401", "ANN"]
+"tools/**" = ["S101"]
