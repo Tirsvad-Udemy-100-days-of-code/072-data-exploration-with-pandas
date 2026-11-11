@@ -1,4 +1,4 @@
-[English](Learning-Points) · [Dansk](Learning-Points-da) · **Bahasa Melayu**
+[English](Learning-Points) · [Dansk](Learning-Points-da) · **Bahasa Malaysia**
 
 # Perkara yang dipelajari
 

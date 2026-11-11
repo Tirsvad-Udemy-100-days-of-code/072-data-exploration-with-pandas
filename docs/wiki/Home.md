@@ -1,4 +1,4 @@
-**English** · [Dansk](Home-da) · [Bahasa Melayu](Home-ms)
+**English** · [Dansk](Home-da) · [Bahasa Malaysia](Home-ms)
 
 # Day 72: Data Exploration with Pandas
 

@@ -1,4 +1,4 @@
-**English** · [Dansk](Lecture-Steps-da) · [Bahasa Melayu](Lecture-Steps-ms)
+**English** · [Dansk](Lecture-Steps-da) · [Bahasa Malaysia](Lecture-Steps-ms)
 
 # Lecture steps
 

@@ -1,4 +1,4 @@
-[English](Home) · **Dansk** · [Bahasa Melayu](Home-ms)
+[English](Home) · **Dansk** · [Bahasa Malaysia](Home-ms)
 
 # Dag 72: Dataudforskning med Pandas
 

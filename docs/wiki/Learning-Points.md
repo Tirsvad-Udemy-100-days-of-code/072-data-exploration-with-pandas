@@ -1,4 +1,4 @@
-**English** · [Dansk](Learning-Points-da) · [Bahasa Melayu](Learning-Points-ms)
+**English** · [Dansk](Learning-Points-da) · [Bahasa Malaysia](Learning-Points-ms)
 
 # Learning points
 

@@ -1,4 +1,4 @@
-[English](Getting-Started) · **Dansk** · [Bahasa Melayu](Getting-Started-ms)
+[English](Getting-Started) · **Dansk** · [Bahasa Malaysia](Getting-Started-ms)
 
 # Kom i gang
 

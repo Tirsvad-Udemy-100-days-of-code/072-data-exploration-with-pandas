@@ -1,4 +1,4 @@
-**English** · [Dansk](Getting-Started-da) · [Bahasa Melayu](Getting-Started-ms)
+**English** · [Dansk](Getting-Started-da) · [Bahasa Malaysia](Getting-Started-ms)
 
 # Getting started
 

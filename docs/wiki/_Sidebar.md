@@ -9,4 +9,4 @@
 
 - English: [Home](Home)
 - Dansk: [Hjem](Home-da)
-- Bahasa Melayu: [Utama](Home-ms)
+- Bahasa Malaysia: [Utama](Home-ms)

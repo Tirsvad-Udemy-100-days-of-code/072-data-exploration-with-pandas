@@ -1,4 +1,4 @@
-[English](Home) · [Dansk](Home-da) · **Bahasa Melayu**
+[English](Home) · [Dansk](Home-da) · **Bahasa Malaysia**
 
 # Hari 72: Penerokaan Data dengan Pandas
 
