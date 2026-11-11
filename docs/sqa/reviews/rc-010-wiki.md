@@ -10,7 +10,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S02 | Initial version | [e6dff98] |
-| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S02 | Criterion 14 checked on the published wiki; verdict Go | pending |
+| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S02 | Criterion 14 checked on the published wiki; verdict Go | [2646ccf] |
 
 ---
 
@@ -59,3 +59,4 @@ Go — no Mandatory criterion fails; criterion 14 was checked on the published w
 [WIKI-001]: ../../wiki
 [QC-WIKI-001]: ../../../framework/qc/artifacts/qc-wiki.md
 [e6dff98]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/072-data-exploration-with-pandas/commit/e6dff989dc1db537606da1e3dc3af7814043e032
+[2646ccf]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/072-data-exploration-with-pandas/commit/2646ccf050687d2525f39513505f089a41c557d3
