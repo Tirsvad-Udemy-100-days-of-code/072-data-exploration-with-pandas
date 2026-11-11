@@ -25,7 +25,8 @@ Do college degrees pay you back? The notebook answers five questions with pandas
 | `src/college_majors/` | The tested functions, one per lecture step (clean architecture layers) |
 | `src/college_majors/data/` | `salaries_by_college_major.csv` (source: PayScale Inc., via the course) |
 | `tests/` | Unit, integration and end-to-end tests; the notebook is executed in a test |
-| `docs/` | Project documents and the wiki (English, Danish, Bahasa Malaysia) |
+| `tools/` | `make_screenshots.py`, which renders the step images from the notebook |
+| `docs/` | Project documents, step images and the wiki (English, Danish, Bahasa Malaysia) |
 
 Function names follow the assignment:
 
@@ -84,6 +85,51 @@ Or print every lecture step in the terminal:
 ```bash
 python -m college_majors
 ```
+
+
+### Screenshots of the lecture steps
+
+Generated from the executed notebook by `python tools/make_screenshots.py`. The [wiki][documentation] explains what each step taught, in English, Danish and Bahasa Malaysia.
+
+**Step 1: Read the .csv file and look at the first rows**
+
+![Step 1](./docs/images/step-01.png)
+
+**Step 2: Shape and column names**
+
+![Step 2](./docs/images/step-02.png)
+
+**Step 3: Missing values**
+
+![Step 3](./docs/images/step-03.png)
+
+**Step 4: Clean the data**
+
+![Step 4](./docs/images/step-04.png)
+
+**Step 5: Highest starting salary**
+
+![Step 5](./docs/images/step-05.png)
+
+**Step 6: Highest mid-career salary and the lowest earners**
+
+![Step 6](./docs/images/step-06.png)
+
+**Step 7: Spread and the lowest-risk majors**
+
+![Step 7](./docs/images/step-07.png)
+
+**Step 8: Highest potential and greatest spread**
+
+![Step 8](./docs/images/step-08.png)
+
+**Step 9: Group by category**
+
+![Step 9](./docs/images/step-09.png)
+
+**Step 10: Average salary by group**
+
+![Step 10](./docs/images/step-10.png)
 
 ## 🧪 Tests
 

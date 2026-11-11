@@ -27,6 +27,7 @@ Tracks backward and forward links between artifact instances so that the Busines
 | [MIL-001] | MIL | en | it | [BC-001], [PP-001] | [MIL-002] | [RC-005] |
 | [MIL-002] | MIL | en | it | [MIL-001] | [MIL-003] | [RC-006] |
 | [MIL-003] | MIL | en | it | [MIL-002] | - | [RC-007] |
+| [WIKI-001] | wiki | en, da, ms | - | [BC-001] | - | [RC-010] |
 | [PY-001] | PY | - | - | [MIL-001], [MIL-002] | - | [RC-008], [RC-009] |
 
 ## Concern Coverage
@@ -69,5 +70,7 @@ No architecture views, use cases or test plan exist yet; the concerns are covere
 [RC-007]: ./reviews/rc-007-mil-003-documentation.md
 [RC-008]: ./reviews/rc-008-python-mil-001.md
 [RC-009]: ./reviews/rc-009-python-mil-002.md
+[RC-010]: ./reviews/rc-010-wiki.md
+[WIKI-001]: ../wiki/Home.md
 [PY-001]: ../../src/college_majors
 [b409b30]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/072-data-exploration-with-pandas/commit/b409b30d933875a01860e78a6a26ccda86d6a9b3
