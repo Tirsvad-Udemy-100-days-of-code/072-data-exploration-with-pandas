@@ -2,17 +2,17 @@
 
 from __future__ import annotations
 
-from importlib import resources
 from pathlib import Path
 
 import pandas as pd
 
 DATA_FILE = "salaries_by_college_major.csv"
+DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 
 
 def default_path() -> Path:
     """Return the path of the CSV file that ships with the package."""
-    return Path(str(resources.files("college_majors") / "data" / DATA_FILE))
+    return DATA_DIR / DATA_FILE
 
 
 def read_data(path: Path | str | None = None) -> pd.DataFrame:
