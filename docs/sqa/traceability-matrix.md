@@ -20,7 +20,7 @@ Tracks backward and forward links between artifact instances so that the Busines
 
 | Artifact Instance | Type | Language | Domain | Upstream (Backward Link) | Downstream (Forward Link) | Last Reviewed (RC-ID) |
 | --- | --- | --- | --- | --- | --- | --- |
-| [BC-001] | BC | en | it | - | [SA-001], [PP-001] | [RC-001] |
+| [BC-001] | BC | en | it | - | [SA-001], [PP-001] | [RC-001], [RC-015] |
 | [SA-001] | SA | en | it | [BC-001] | [PP-001], [DICT-001] | [RC-002] |
 | [DICT-001] | DICT | en | it | [BC-001], [SA-001] | - | [RC-003] |
 | [PP-001] | PP | en | it | [BC-001], [SA-001] | [MIL-001], [MIL-002], [MIL-003] | [RC-004] |
@@ -30,6 +30,7 @@ Tracks backward and forward links between artifact instances so that the Busines
 | [WIKI-001] | wiki | en, da, ms | - | [BC-001] | - | [RC-010] |
 | [MIL-004] | MIL | en | it | [BC-001], [MIL-002] | - | [RC-011] |
 | [MIL-005] | MIL | en | it | [BC-001], [MIL-004] | - | [RC-013] |
+| [MIL-006] | MIL | en | it | [BC-001], [MIL-005] | - | [RC-016] |
 | [PY-001] | PY | - | - | [MIL-001], [MIL-002], [MIL-004], [MIL-005] | - | [RC-008], [RC-009], [RC-012], [RC-014] |
 
 ## Concern Coverage
@@ -77,6 +78,9 @@ No architecture views, use cases or test plan exist yet; the concerns are covere
 [RC-012]: ./reviews/rc-012-python-mil-004.md
 [RC-013]: ./reviews/rc-013-mil-005-answers-on-top.md
 [RC-014]: ./reviews/rc-014-python-mil-005.md
+[RC-015]: ./reviews/rc-015-business-case-amendment.md
+[RC-016]: ./reviews/rc-016-mil-006-extra-credit.md
+[MIL-006]: ../milestones/mil-006-extra-credit.md
 [MIL-005]: ../milestones/mil-005-answers-on-top.md
 [MIL-004]: ../milestones/mil-004-answers.md
 [WIKI-001]: ../wiki/Home.md
