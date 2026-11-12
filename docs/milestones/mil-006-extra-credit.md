@@ -11,7 +11,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-12 | Accepted | Jens Tirsvad Nielsen | S02 (AI as stand-in) | Initial version | pending |
+| 2026-11-12 | Accepted | Jens Tirsvad Nielsen | S02 (AI as stand-in) | Initial version | [5300bd8] |
 
 ---
 
@@ -72,3 +72,4 @@ A scraper for the archived PayScale college salary report that uses only the Pyt
 
 [BC-001]: ../business-case.md
 [MIL-005]: ./mil-005-answers-on-top.md
+[5300bd8]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/072-data-exploration-with-pandas/commit/5300bd8071e1dc27c4689348b5989bde1a698582

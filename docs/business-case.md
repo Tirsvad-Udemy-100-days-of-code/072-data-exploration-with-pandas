@@ -12,7 +12,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | S02 (AI as stand-in) | Initial version | [b409b30] |
-| 2026-11-12 | Accepted | Jens Tirsvad Nielsen | S02 (AI as stand-in) | Extra credit moved into scope: scraping newer PayScale data from the Wayback Machine | pending |
+| 2026-11-12 | Accepted | Jens Tirsvad Nielsen | S02 (AI as stand-in) | Extra credit moved into scope: scraping newer PayScale data from the Wayback Machine | [5300bd8] |
 
 ---
 
@@ -142,3 +142,4 @@ Proceed — the scope is small, the data is public to course participants and ev
 
 [SA-001]: ./stakeholder-analysis.md
 [b409b30]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/072-data-exploration-with-pandas/commit/b409b30d933875a01860e78a6a26ccda86d6a9b3
+[5300bd8]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/072-data-exploration-with-pandas/commit/5300bd8071e1dc27c4689348b5989bde1a698582
