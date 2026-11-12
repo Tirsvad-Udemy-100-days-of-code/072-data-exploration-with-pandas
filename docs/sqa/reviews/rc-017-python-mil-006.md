@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-12 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S02 | Initial version | pending |
+| 2026-11-12 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S02 | Initial version | [34ff738] |
 
 ---
 
@@ -59,3 +59,4 @@ Go — no Mandatory criterion fails (MIL-006 scraper and comparison); the stand-
 
 [PY-001]: ../../../src/college_majors
 [QC-PY-001]: ../../../framework/qc/code/qc-programming-python.md
+[34ff738]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/072-data-exploration-with-pandas/commit/34ff738e634f7bab19733ebfaca1a4560ed675da
