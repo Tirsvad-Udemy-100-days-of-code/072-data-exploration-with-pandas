@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-12 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S02 | Initial version | pending |
+| 2026-11-12 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S02 | Initial version | [266ba91] |
 
 ---
 
@@ -63,3 +63,4 @@ Go — no Mandatory criterion fails; the stand-in review is not independent and 
 [MIL-004]: ../../milestones/mil-004-answers.md
 [QC-MIL-001]: ../../../framework/qc/artifacts/qc-milestones-gateways.md
 [QC-LANG-001]: ../../../framework/qc/artifacts/qc-language-domain.md
+[266ba91]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/072-data-exploration-with-pandas/commit/266ba914e205440aa9239b715c548992ead5b34e

@@ -11,7 +11,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-12 | Accepted | Jens Tirsvad Nielsen | S02 (AI as stand-in) | Initial version | pending |
+| 2026-11-12 | Accepted | Jens Tirsvad Nielsen | S02 (AI as stand-in) | Initial version | [266ba91] |
 
 ---
 
@@ -70,3 +70,4 @@ A section "Answers to the five questions" in the notebook, one answer per questi
 
 [BC-001]: ../business-case.md
 [MIL-002]: ./mil-002-analysis.md
+[266ba91]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/072-data-exploration-with-pandas/commit/266ba914e205440aa9239b715c548992ead5b34e
