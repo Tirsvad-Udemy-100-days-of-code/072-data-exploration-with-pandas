@@ -2,9 +2,11 @@
 
 # Bermula
 
-Anda memerlukan Python 3.13 atau lebih baharu. Satu-satunya kebergantungan semasa larian ialah pandas; JupyterLab dan pytest ialah tambahan pilihan.
+Keperluan: Python 3.13 atau lebih baharu. Satu-satunya kebergantungan semasa larian ialah `pandas`; JupyterLab dan pytest ialah tambahan pilihan.
 
-## Cipta persekitaran
+Cipta dan gunakan `.venv` tempatan.
+
+Windows (PowerShell):
 
 ```powershell
 python -m venv .venv
@@ -13,21 +15,21 @@ python -m pip install --upgrade pip
 python -m pip install -e ".[dev,notebook]"
 ```
 
-Pada Linux dan macOS gunakan `source .venv/bin/activate` sebagai ganti baris pengaktifan.
+Linux dan macOS:
 
-## Jalankan
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -e ".[dev,notebook]"
+```
+
+Jalankan buku nota, baris arahan dan ujian:
 
 ```bash
 python -m jupyter lab notebooks/day_72_data_exploration.ipynb
 python -m college_majors
-```
-
-Arahan pertama membuka buku nota. Arahan kedua mencetak setiap langkah kuliah dalam terminal.
-
-## Uji
-
-```bash
 python -m pytest --cov=college_majors
 ```
 
-Ujian berjalan tanpa talian dan menjalankan buku nota dari awal hingga akhir.
+**Apa yang anda dapat:** persediaan yang boleh diulang (satu persekitaran maya bagi setiap projek), pakej yang dipasang dalam mod boleh disunting, buku nota yang menjawab lima soalan, dan ujian yang membuktikan setiap jawapan.

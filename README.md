@@ -29,7 +29,7 @@ Do college degrees pay you back? The notebook answers five questions with pandas
 
 | Folder | What it holds |
 | --- | --- |
-| `notebooks/` | `day_72_data_exploration.ipynb`, the lecture steps in order, with outputs |
+| `notebooks/` | `day_72_data_exploration.ipynb`, the five answers at the top, then the lecture steps in order, with outputs |
 | `src/college_majors/` | The tested functions, one per lecture step (clean architecture layers) |
 | `src/college_majors/data/` | `salaries_by_college_major.csv` (source: PayScale Inc., via the course) |
 | `tests/` | Unit, integration and end-to-end tests; the notebook is executed in a test |

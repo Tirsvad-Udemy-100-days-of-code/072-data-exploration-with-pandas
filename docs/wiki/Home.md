@@ -12,6 +12,8 @@ Do college degrees pay you back? This project explores the PayScale post-univers
 4. Which majors are lowest risk? Nursing has the smallest spread between low and high earners.
 5. Do Business, STEM or HASS degrees earn more? STEM, on average, then Business, then HASS.
 
+The notebook shows these answers at the top, directly under the title.
+
 ## Pages
 
 - [Getting started](Getting-Started): create `.venv`, install, run the notebook and the tests.
