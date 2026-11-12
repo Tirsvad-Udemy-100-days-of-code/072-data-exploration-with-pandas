@@ -29,6 +29,7 @@ Tracks backward and forward links between artifact instances so that the Busines
 | [MIL-003] | MIL | en | it | [MIL-002] | - | [RC-007] |
 | [WIKI-001] | wiki | en, da, ms | - | [BC-001] | - | [RC-010] |
 | [MIL-004] | MIL | en | it | [BC-001], [MIL-002] | - | [RC-011] |
+| [MIL-005] | MIL | en | it | [BC-001], [MIL-004] | - | [RC-013] |
 | [PY-001] | PY | - | - | [MIL-001], [MIL-002], [MIL-004] | - | [RC-008], [RC-009], [RC-012] |
 
 ## Concern Coverage
@@ -74,6 +75,8 @@ No architecture views, use cases or test plan exist yet; the concerns are covere
 [RC-010]: ./reviews/rc-010-wiki.md
 [RC-011]: ./reviews/rc-011-mil-004-answers.md
 [RC-012]: ./reviews/rc-012-python-mil-004.md
+[RC-013]: ./reviews/rc-013-mil-005-answers-on-top.md
+[MIL-005]: ../milestones/mil-005-answers-on-top.md
 [MIL-004]: ../milestones/mil-004-answers.md
 [WIKI-001]: ../wiki/Home.md
 [PY-001]: ../../src/college_majors
