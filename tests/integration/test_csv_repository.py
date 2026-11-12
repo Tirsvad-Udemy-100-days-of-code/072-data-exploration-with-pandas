@@ -62,3 +62,18 @@ def test_notebook_executes_end_to_end_without_error(tmp_path: Path, notebook_pat
         if out.output_type == "error"
     ]
     assert errors == []
+    _assert_five_answers_section(notebook)
+
+
+def _assert_five_answers_section(notebook: nbformat.NotebookNode) -> None:
+    sources = "\n".join(str(cell.source) for cell in notebook.cells)
+    assert "Step 11: Answers to the five questions" in sources
+
+    outputs = "\n".join(
+        str(out.get("text", "")) + str(out.get("data", {}).get("text/plain", ""))
+        for cell in notebook.cells
+        if cell.cell_type == "code"
+        for out in cell.outputs
+    )
+    for expected in ("Physician Assistant", "Nursing", "Economics", "Best-earning group: STEM"):
+        assert expected in outputs

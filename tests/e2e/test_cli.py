@@ -24,6 +24,7 @@ HEADINGS = [
     "Step 9: greatest spread",
     "Step 10: majors per group",
     "Step 10: average salary by group",
+    "Step 11: answers to the five questions",
 ]
 
 
@@ -40,6 +41,16 @@ def test_main_prints_every_step_heading_and_physician_assistant() -> None:
     for heading in HEADINGS:
         assert f"== {heading} ==" in text
     assert "Physician Assistant" in text
+
+
+def test_main_prints_the_five_answers_after_step_10() -> None:
+    _, text = _run_main()
+
+    step_11 = text[text.index("== Step 11:") :]
+    assert "Spanish" in step_11
+    assert "Education" in step_11
+    assert "Nursing" in step_11
+    assert "Highest mean mid-career salary: STEM" in step_11
 
 
 def test_main_prints_all_columns_without_truncation() -> None:

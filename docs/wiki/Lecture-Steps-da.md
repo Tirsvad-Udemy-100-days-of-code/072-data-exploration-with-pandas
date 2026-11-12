@@ -63,3 +63,9 @@ Hvert trin nedenfor svarer til et afsnit i notebooken `notebooks/day_72_data_exp
 ![Step 10](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/072-data-exploration-with-pandas/raw/branch/main/docs/images/step-10.png)
 
 **Det lærte vi:** `.mean()` på grupperne besvarer det sidste spørgsmål: STEM tjener mest i gennemsnit, derefter Business og til sidst HASS. Et talformat med to decimaler gør tabellen læsbar.
+
+## Trin 11: Svar på de fem spørgsmål
+
+![Step 11](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/072-data-exploration-with-pandas/raw/branch/main/docs/images/step-11.png)
+
+**Det lærte vi:** `answer_five_questions` samler alle resultater. Højeste startløn: Physician Assistant, derefter ingeniørstudierne. Laveste indtjening: Spanish, Religion og Education. Højeste potentiale: Economics, Finance og Chemical Engineering. Lavest risiko: Nursing. I gennemsnit tjener STEM mest, derefter Business og til sidst HASS.
