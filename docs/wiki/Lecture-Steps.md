@@ -63,3 +63,9 @@ Each step below matches a section of the notebook `notebooks/day_72_data_explora
 ![Step 10](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/072-data-exploration-with-pandas/raw/branch/main/docs/images/step-10.png)
 
 **What we gained:** `.mean()` on the groups answers the last question: STEM earns most on average, then Business, then HASS. A number format with two decimals makes the table readable.
+
+## Step 11: Answers to the five questions
+
+![Step 11](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/072-data-exploration-with-pandas/raw/branch/main/docs/images/step-11.png)
+
+**What we gained:** `answer_five_questions` collects every result. Highest starting salaries: Physician Assistant, then the engineering majors. Lowest earnings: Spanish, Religion and Education. Highest potential: Economics, Finance and Chemical Engineering. Lowest risk: Nursing. On average STEM earns most, then Business, then HASS.

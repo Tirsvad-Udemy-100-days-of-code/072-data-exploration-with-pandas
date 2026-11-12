@@ -63,3 +63,9 @@ Setiap langkah di bawah sepadan dengan satu bahagian dalam buku nota `notebooks/
 ![Step 10](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/072-data-exploration-with-pandas/raw/branch/main/docs/images/step-10.png)
 
 **Apa yang kita pelajari:** `.mean()` pada kumpulan menjawab soalan terakhir: STEM berpendapatan paling tinggi secara purata, kemudian Business, kemudian HASS. Format nombor dengan dua tempat perpuluhan menjadikan jadual mudah dibaca.
+
+## Langkah 11: Jawapan kepada lima soalan
+
+![Step 11](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/072-data-exploration-with-pandas/raw/branch/main/docs/images/step-11.png)
+
+**Apa yang kita pelajari:** `answer_five_questions` mengumpulkan semua hasil. Gaji permulaan tertinggi: Physician Assistant, kemudian jurusan kejuruteraan. Pendapatan terendah: Spanish, Religion dan Education. Potensi tertinggi: Economics, Finance dan Chemical Engineering. Risiko terendah: Nursing. Secara purata STEM berpendapatan paling tinggi, kemudian Business, kemudian HASS.

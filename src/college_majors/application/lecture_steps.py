@@ -72,6 +72,26 @@ def lowest_mid_career_salary(frame: pd.DataFrame) -> MajorSalary:
     return _best(frame, col.MID_CAREER, highest=False)
 
 
+def _ranked(frame: pd.DataFrame, column: str, count: int, *, ascending: bool) -> pd.DataFrame:
+    ranked = frame.sort_values(column, ascending=ascending)
+    return ranked[[col.MAJOR, column]].head(count)
+
+
+def highest_starting_salary_majors(frame: pd.DataFrame, count: int = 5) -> pd.DataFrame:
+    """Return the majors with the highest starting salary, highest first."""
+    return _ranked(frame, col.STARTING, count, ascending=False)
+
+
+def lowest_starting_salary_majors(frame: pd.DataFrame, count: int = 5) -> pd.DataFrame:
+    """Return the majors with the lowest starting salary, lowest first."""
+    return _ranked(frame, col.STARTING, count, ascending=True)
+
+
+def lowest_mid_career_salary_majors(frame: pd.DataFrame, count: int = 5) -> pd.DataFrame:
+    """Return the majors with the lowest mid-career salary, lowest first."""
+    return _ranked(frame, col.MID_CAREER, count, ascending=True)
+
+
 def add_spread(frame: pd.DataFrame) -> pd.DataFrame:
     """Add the Spread column, like df.insert()."""
     return col.add_spread(frame)

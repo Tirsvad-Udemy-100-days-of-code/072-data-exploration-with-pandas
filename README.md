@@ -17,7 +17,15 @@ A Jupyter notebook and a small, tested Python package that explore the PayScale 
 
 ## 🧭 Overview
 
-Do college degrees pay you back? The notebook answers five questions with pandas: which degrees have the highest starting salaries, which majors earn least, which have the highest earning potential, which are the lowest risk, and whether Business, STEM or HASS degrees earn more on average.
+Do college degrees pay you back? The notebook answers five questions with pandas:
+
+| Question | Answer |
+| --- | --- |
+| 1. Which degrees have the highest starting salaries? | Physician Assistant (74,300), then Chemical, Computer, Electrical and Mechanical Engineering |
+| 2. Which majors have the lowest earnings after college? | Spanish, Religion and Education start lowest; Education and Religion earn least in mid-career (52,000) |
+| 3. Which degrees have the highest earning potential? | Economics (210,000 at the 90th percentile), Finance, Chemical Engineering, Math, Physics |
+| 4. What are the lowest-risk majors? | Nursing (smallest spread, 50,700), then Physician Assistant, Nutrition, Spanish, Health Care Administration |
+| 5. Do Business, STEM or HASS earn more? | STEM (mid-career 90,800), then Business (75,100), then HASS (63,000) |
 
 | Folder | What it holds |
 | --- | --- |
@@ -36,6 +44,7 @@ Function names follow the assignment:
 | `df.shape`, `df.columns` | `shape`, `columns` |
 | `df.isna()` | `missing_values` |
 | `df.dropna()` | `clean` |
+| `answer_five_questions` | One answer per question (step 11) |
 | `max`, `idxmax`, `loc` | `highest_starting_salary`, `highest_mid_career_salary` |
 | `min`, `idxmin` | `lowest_starting_salary`, `lowest_mid_career_salary` |
 | `insert` (Spread column) | `add_spread` |
@@ -130,6 +139,10 @@ Generated from the executed notebook by `python tools/make_screenshots.py`. The 
 **Step 10: Average salary by group**
 
 ![Step 10](./docs/images/step-10.png)
+
+**Step 11: Answers to the five questions**
+
+![Step 11](./docs/images/step-11.png)
 
 ## 🧪 Tests
 

@@ -11,6 +11,7 @@ from typing import TextIO
 import pandas as pd
 
 from college_majors.application import lecture_steps as steps
+from college_majors.application.answers import answer_five_questions
 from college_majors.infrastructure.csv_repository import read_data
 
 
@@ -57,6 +58,19 @@ def _render_steps(frame: pd.DataFrame, out: TextIO) -> None:
     _section(out, "Step 9: greatest spread", steps.greatest_spread_majors(cleaned))
     _section(out, "Step 10: majors per group", steps.majors_per_group(cleaned))
     _section(out, "Step 10: average salary by group", steps.average_salary_by_group(cleaned))
+    _render_answers(cleaned, out)
+
+
+def _render_answers(cleaned: pd.DataFrame, out: TextIO) -> None:
+    answers = answer_five_questions(cleaned)
+    _section(out, "Step 11: answers to the five questions", "")
+    _section(out, "1. Highest starting salaries", answers.highest_starting)
+    _section(out, "2a. Lowest starting salaries", answers.lowest_starting)
+    _section(out, "2b. Lowest mid-career salaries", answers.lowest_mid_career)
+    _section(out, "3. Highest earning potential", answers.highest_potential)
+    _section(out, "4. Lowest risk", answers.lowest_risk)
+    _section(out, "5. Average salary per group", answers.group_averages)
+    out.write(f"Highest mean mid-career salary: {answers.best_group}\n")
 
 
 def main(argv: Sequence[str] | None = None, out: TextIO | None = None) -> int:

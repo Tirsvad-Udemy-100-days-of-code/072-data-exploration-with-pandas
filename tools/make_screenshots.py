@@ -51,6 +51,8 @@ def read_steps() -> list[tuple[str, list[tuple[str, str]]]]:
             match = re.match(r"## (Step \d+: .+)", source)
             if match:
                 steps.append((match.group(1), []))
+            elif steps and (source.startswith("### ") or source.startswith("**Answer")):
+                steps[-1][1].append((source.lstrip("# ").replace("**", ""), ""))
         elif cell["cell_type"] == "code" and steps:
             steps[-1][1].append((source, _output_text(cell)))
     return steps
@@ -72,8 +74,10 @@ def render(title: str, pairs: list[tuple[str, str]], target: Path) -> None:
     bold = load_font(SIZE + 3)
     blocks: list[tuple[str, tuple[int, int, int], str]] = []
     for code, output in pairs:
-        blocks.append((code, CODE_BG, "In"))
-        blocks.append((output, BACKGROUND, "Out"))
+        if code:
+            blocks.append((code, CODE_BG, "In"))
+        if output:
+            blocks.append((output, BACKGROUND, "Out"))
     probe = ImageDraw.Draw(Image.new("RGB", (1, 1)))
     line_height = SIZE + 6
     lines = [line for text, _, _ in blocks for line in text.splitlines()] or [""]
