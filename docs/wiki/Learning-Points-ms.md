@@ -19,3 +19,5 @@
 - Secara purata STEM berpendapatan paling tinggi, kemudian Business, kemudian HASS.
 
 Data ini dari tahun 2008 dan melihat sepuluh tahun sebelumnya, jadi kedudukan tinggi Finance mungkin telah berubah sejak krisis kewangan.
+
+Kemas kini: data PayScale yang lebih baharu (syot kilat 2020, lihat langkah 12) menunjukkan kedudukan sebahagian besarnya kekal, dan Finance jatuh dari kedudukan 14 daripada 50 ke 169 daripada 350.

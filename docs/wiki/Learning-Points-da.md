@@ -19,3 +19,5 @@
 - STEM tjener mest i gennemsnit, derefter Business og til sidst HASS.
 
 Dataene er fra 2008 og ser på de foregående ti år, så Finances høje placering kan have ændret sig siden finanskrisen.
+
+Opdatering: nyere PayScale-data (et øjebliksbillede fra 2020, se trin 12) viser at rangeringen stort set holdt, og at Finance faldt fra plads 14 af 50 til plads 169 af 350.

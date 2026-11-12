@@ -69,3 +69,9 @@ Setiap langkah di bawah sepadan dengan satu bahagian dalam buku nota `notebooks/
 ![Step 11](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/072-data-exploration-with-pandas/raw/branch/main/docs/images/step-11.png)
 
 **Apa yang kita pelajari:** `answer_five_questions` mengumpulkan semua hasil. Gaji permulaan tertinggi: Physician Assistant, kemudian jurusan kejuruteraan. Pendapatan terendah: Spanish, Religion dan Education. Potensi tertinggi: Economics, Finance dan Chemical Engineering. Risiko terendah: Nursing. Secara purata STEM berpendapatan paling tinggi, kemudian Business, kemudian HASS.
+
+## Langkah 12: Kredit tambahan, apa yang berubah sejak 2008
+
+![Step 12](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/072-data-exploration-with-pandas/raw/branch/main/docs/images/step-12.png)
+
+**Apa yang kita pelajari:** Laman PayScale kini berbayar, jadi pengikis yang hanya menggunakan pustaka standard membaca salinan Wayback Machine (syot kilat 2020, 350 jurusan, disimpan sebagai CSV supaya tiada keperluan rangkaian). Hanya 23 daripada 50 jurusan mempunyai nama yang sama dalam kedua-dua set. Jurusan teknologi naik paling banyak dalam gaji pertengahan kerjaya (Management Information Systems +28.6%, Information Technology +23.1%, Computer Science +20.1%), tiada jurusan yang dibandingkan jatuh, dan Finance bergerak dari kedudukan 14 daripada 50 ke kedudukan 169 daripada 350.

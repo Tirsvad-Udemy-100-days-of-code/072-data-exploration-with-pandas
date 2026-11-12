@@ -11,7 +11,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | S02 (AI as stand-in) | Initial version | [b409b30] |
+| 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | S02 (AI as stand-in) | Initial version | [b409b30] |
+| 2026-11-12 | Accepted | Jens Tirsvad Nielsen | S02 (AI as stand-in) | Extra credit moved into scope: scraping newer PayScale data from the Wayback Machine | [5300bd8] |
 
 ---
 
@@ -40,6 +41,7 @@ A plain Python package with tests and clear instructions lets coursists run and 
 5. Provide a screenshot for each lecture step in the README and in the wiki.
 6. Provide a wiki in English, Danish and Bahasa Malaysia that explains what each lecture step taught.
 7. Publish a repository description and topics.
+8. Compare the 2008 data with newer PayScale data taken from the Wayback Machine (the lecture's extra credit), with a scraper that needs no extra runtime dependency.
 
 ## Scope
 
@@ -51,9 +53,10 @@ A plain Python package with tests and clear instructions lets coursists run and 
 - README from the framework template, screenshots, wiki in three languages, repository description and topics.
 - Local static analysis with opengrep before each push.
 
+- A scraper for the PayScale college salary report (majors that pay you back) as archived by the Wayback Machine, the saved result as a CSV file, and a comparison with the 2008 data in the notebook, the command line, the README and the wiki.
+
 ### Out of Scope
 
-- The extra-credit web scraping of current PayScale data.
 - Google Colab hosting.
 - Charts, a web interface or any GUI.
 - Publishing a package to PyPI.
@@ -94,6 +97,7 @@ The project supports the Product Owner's goal of completing the 100 Days of Code
 | The dataset download link has expired | The analysis cannot run on the real data | Try the supplied link; if it fails, stop and ask S01 for the file |
 | pandas is a runtime dependency although S03 wants none | A viewer must install one package | pandas is the subject of the assignment; it is the only runtime dependency, and JupyterLab is an optional extra, both stated in the README |
 | Translations contain errors | Misleading wiki text | English is authoritative; translations follow page by page; S01 can challenge them |
+| The PayScale site is paywalled and changes its layout, and the Wayback Machine may lack or block a snapshot | The newer data cannot be fetched or parsed | Use the Wayback Machine as the lecture says; keep the parsed result as a CSV in the repository so tests and users never need the network; the parser is tested offline on sample markup |
 | A token leaks into the repository | Security defect | `.env` is ignored, never read by project code, never printed |
 | Screenshots drift from the code | Outdated documentation | A script regenerates them from the real output |
 
@@ -105,6 +109,7 @@ The project supports the Product Owner's goal of completing the 100 Days of Code
 
 ## Constraints
 
+- Scraping uses only the Python standard library, one polite request per run with a generic client name, and is never run by the tests.
 - Python 3.13 or newer, `venv`, configuration in `pyproject.toml`.
 - Folders `src/`, `tests/`, `docs/`.
 - Jupyter is used for the notebook; runtime dependency is pandas only, Jupyter tools are an optional `notebook` extra.
@@ -137,3 +142,4 @@ Proceed — the scope is small, the data is public to course participants and ev
 
 [SA-001]: ./stakeholder-analysis.md
 [b409b30]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/072-data-exploration-with-pandas/commit/b409b30d933875a01860e78a6a26ccda86d6a9b3
+[5300bd8]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/072-data-exploration-with-pandas/commit/5300bd8071e1dc27c4689348b5989bde1a698582

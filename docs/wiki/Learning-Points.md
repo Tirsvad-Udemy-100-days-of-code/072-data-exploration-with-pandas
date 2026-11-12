@@ -19,3 +19,5 @@
 - STEM earns most on average, then Business, then HASS.
 
 The data is from 2008 and looks at the prior ten years, so Finance ranking high may have changed since the financial crash.
+
+Update: newer PayScale data (a 2020 snapshot, see Step 12) shows the ranking mostly held, and Finance fell from rank 14 of 50 to rank 169 of 350.
