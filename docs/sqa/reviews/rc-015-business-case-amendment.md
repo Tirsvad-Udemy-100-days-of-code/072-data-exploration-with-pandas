@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-12 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S02 | Initial version | [5300bd8] |
+| 2026-11-12 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S02 | Initial version | [5300bd8] |
 
 ---
 

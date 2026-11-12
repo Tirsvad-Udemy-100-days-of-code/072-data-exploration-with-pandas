@@ -10,9 +10,14 @@ from typing import TextIO
 
 import pandas as pd
 
+from college_majors.application import comparison as cmp
 from college_majors.application import lecture_steps as steps
 from college_majors.application.answers import answer_five_questions
-from college_majors.infrastructure.csv_repository import read_data
+from college_majors.infrastructure import wayback_scraper as wayback
+from college_majors.infrastructure.csv_repository import read_data, read_payscale_majors
+
+# The day whose captures of the report are scraped.
+WAYBACK_DAY = "20200214"
 
 
 def _format_float(value: float) -> str:
@@ -59,6 +64,7 @@ def _render_steps(frame: pd.DataFrame, out: TextIO) -> None:
     _section(out, "Step 10: majors per group", steps.majors_per_group(cleaned))
     _section(out, "Step 10: average salary by group", steps.average_salary_by_group(cleaned))
     _render_answers(cleaned, out)
+    _render_extra_credit(cleaned, read_payscale_majors(), out)
 
 
 def _render_answers(cleaned: pd.DataFrame, out: TextIO) -> None:
@@ -73,10 +79,51 @@ def _render_answers(cleaned: pd.DataFrame, out: TextIO) -> None:
     out.write(f"Highest mean mid-career salary: {answers.best_group}\n")
 
 
+def _render_extra_credit(cleaned: pd.DataFrame, newer: pd.DataFrame, out: TextIO) -> None:
+    _section(out, "Step 12: extra credit, what changed since 2008", "")
+    table = cmp.compare_with_2008(cleaned, newer)
+    unmatched = cmp.unmatched_2008_majors(cleaned, newer)
+    out.write(f"Newer data: PayScale snapshot {cmp.snapshot_year(newer)}, {len(newer)} majors\n")
+    out.write(f"Majors in both data sets: {len(table)} of {len(cleaned)}\n")
+    out.write(f"2008 majors without a match: {', '.join(unmatched) or 'none'}\n")
+    _section(out, "Biggest gainers (mid-career pay)", cmp.biggest_gainers(table))
+    _section(out, "Biggest losers (mid-career pay)", cmp.biggest_losers(table))
+    standing = cmp.where_is(table, "Finance")
+    if standing is None:
+        out.write("\nFinance is not in both data sets\n")
+    else:
+        out.write(
+            f"\nFinance by mid-career pay: rank {standing.rank_then} in 2008, "
+            f"rank {standing.rank_now} now\n"
+        )
+
+
+def _scrape_wayback(output: Path, out: TextIO) -> int:
+    try:
+        result = wayback.scrape(WAYBACK_DAY)
+    except wayback.WaybackError as error:
+        sys.stderr.write(f"Scrape failed: {error}\n")
+        return 1
+    wayback.write_csv(result.rows, output, result.snapshot)
+    out.write(f"Wrote {len(result.rows)} majors from capture {result.snapshot} to {output}\n")
+    out.write(f"Captures used per page: {', '.join(result.page_captures)}\n")
+    return 0
+
+
 def main(argv: Sequence[str] | None = None, out: TextIO | None = None) -> int:
     """Run the command line and return the exit code."""
     parser = argparse.ArgumentParser(description="Day 72: data exploration with pandas")
     parser.add_argument("--csv", type=Path, default=None, help="path to the salaries CSV file")
+    parser.add_argument(
+        "--scrape-wayback",
+        type=Path,
+        default=None,
+        metavar="OUTPUT_CSV",
+        help="fetch the archived PayScale report (slow, uses the network) and save it as CSV",
+    )
     args = parser.parse_args(argv)
-    render(read_data(args.csv), out if out is not None else sys.stdout)
+    stream = out if out is not None else sys.stdout
+    if args.scrape_wayback is not None:
+        return _scrape_wayback(args.scrape_wayback, stream)
+    render(read_data(args.csv), stream)
     return 0

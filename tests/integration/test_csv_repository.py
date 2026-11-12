@@ -82,6 +82,10 @@ def _assert_five_answers_section(notebook: nbformat.NotebookNode) -> None:
     for expected in ("Physician Assistant", "Nursing", "Economics", "Best-earning group: STEM"):
         assert expected in outputs
 
+    assert "Step 12: Extra credit, what changed since 2008" in sources
+    for expected in ("Majors in both data sets: 23 of 50", "Management Information Systems"):
+        assert expected in outputs
+
 
 QUESTIONS = [
     "Which degrees have the highest starting salaries?",
@@ -100,6 +104,13 @@ def test_notebook_states_the_five_answers_on_top(notebook_path: Path) -> None:
     assert cell.source.startswith("## The five questions and their answers")
     assert all(question in cell.source for question in QUESTIONS)
     assert all(other.cell_type != "code" for other in notebook.cells[:2])
+
+
+def test_notebook_top_answers_point_to_the_extra_credit(notebook_path: Path) -> None:
+    text = nbformat.read(notebook_path, as_version=4).cells[1].source
+
+    assert "Extra credit" in text
+    assert "Step 12" in text
 
 
 def test_notebook_top_answers_match_the_computed_answers(

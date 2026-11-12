@@ -69,3 +69,9 @@ Hvert trin nedenfor svarer til et afsnit i notebooken `notebooks/day_72_data_exp
 ![Step 11](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/072-data-exploration-with-pandas/raw/branch/main/docs/images/step-11.png)
 
 **Det lærte vi:** `answer_five_questions` samler alle resultater. Højeste startløn: Physician Assistant, derefter ingeniørstudierne. Laveste indtjening: Spanish, Religion og Education. Højeste potentiale: Economics, Finance og Chemical Engineering. Lavest risiko: Nursing. I gennemsnit tjener STEM mest, derefter Business og til sidst HASS.
+
+## Trin 12: Ekstra point, hvad er ændret siden 2008
+
+![Step 12](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/072-data-exploration-with-pandas/raw/branch/main/docs/images/step-12.png)
+
+**Det lærte vi:** PayScales side er bag betalingsmur, så en scraper med kun standardbiblioteket læser Wayback Machine-kopien (et øjebliksbillede fra 2020, 350 studier, gemt som CSV så ingen behøver netværk). Kun 23 af de 50 studier har samme navn i begge datasæt. Teknologistudierne steg mest i karrierelønnen (Management Information Systems +28,6 %, Information Technology +23,1 %, Computer Science +20,1 %), intet sammenlignet studie faldt, og Finance gik fra plads 14 af 50 til plads 169 af 350.

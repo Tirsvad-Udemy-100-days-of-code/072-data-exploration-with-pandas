@@ -24,3 +24,13 @@ def add_spread(frame: pd.DataFrame) -> pd.DataFrame:
     result = frame.copy()
     result.insert(1, SPREAD, spread)
     return result
+
+
+# Column names of the newer PayScale table (the extra credit).
+RANK = "Rank"
+DEGREE_TYPE = "Degree Type"
+EARLY_CAREER = "Early Career Pay"
+MID_CAREER_NOW = "Mid-Career Pay"
+HIGH_MEANING = "High Meaning Pct"
+SNAPSHOT = "Snapshot"
+BACHELORS = "Bachelor's"

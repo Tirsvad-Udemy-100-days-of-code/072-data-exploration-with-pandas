@@ -31,7 +31,7 @@ Do college degrees pay you back? The notebook answers five questions with pandas
 | --- | --- |
 | `notebooks/` | `day_72_data_exploration.ipynb`, the five answers at the top, then the lecture steps in order, with outputs |
 | `src/college_majors/` | The tested functions, one per lecture step (clean architecture layers) |
-| `src/college_majors/data/` | `salaries_by_college_major.csv` (source: PayScale Inc., via the course) |
+| `src/college_majors/data/` | `salaries_by_college_major.csv` (source: PayScale Inc., via the course) and `payscale_majors_wayback.csv` (350 majors, PayScale snapshot of 13-14 February 2020 from the Wayback Machine) |
 | `tests/` | Unit, integration and end-to-end tests; the notebook is executed in a test |
 | `tools/` | `make_screenshots.py`, which renders the step images from the notebook |
 | `docs/` | Project documents, step images and the wiki (English, Danish, Bahasa Malaysia) |
@@ -45,6 +45,7 @@ Function names follow the assignment:
 | `df.isna()` | `missing_values` |
 | `df.dropna()` | `clean` |
 | `answer_five_questions` | One answer per question (step 11) |
+| `compare_with_2008`, `biggest_gainers`, `biggest_losers`, `where_is` | Extra credit: 2008 against newer PayScale data (step 12) |
 | `max`, `idxmax`, `loc` | `highest_starting_salary`, `highest_mid_career_salary` |
 | `min`, `idxmin` | `lowest_starting_salary`, `lowest_mid_career_salary` |
 | `insert` (Spread column) | `add_spread` |
@@ -143,6 +144,18 @@ Generated from the executed notebook by `python tools/make_screenshots.py`. The 
 **Step 11: Answers to the five questions**
 
 ![Step 11](./docs/images/step-11.png)
+
+**Step 12: Extra credit, what changed since 2008**
+
+The lecture notes that PayScale's site is paywalled, so the newer data comes from the Wayback Machine. It is a 2020 snapshot, not today's data, and only the 23 of 50 majors with the same name in both sets can be compared. Technology majors gained most in mid-career pay (Management Information Systems +28.6%, Information Technology +23.1%, Computer Science +20.1%), no compared major fell, and Finance moved from rank 14 of 50 to rank 169 of 350.
+
+![Step 12](./docs/images/step-12.png)
+
+To scrape the data again (standard library only, one polite request per page, never run by the tests):
+
+```bash
+python -m college_majors --scrape-wayback payscale.csv
+```
 
 ## 🧪 Tests
 

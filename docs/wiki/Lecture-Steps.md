@@ -69,3 +69,9 @@ Each step below matches a section of the notebook `notebooks/day_72_data_explora
 ![Step 11](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/072-data-exploration-with-pandas/raw/branch/main/docs/images/step-11.png)
 
 **What we gained:** `answer_five_questions` collects every result. Highest starting salaries: Physician Assistant, then the engineering majors. Lowest earnings: Spanish, Religion and Education. Highest potential: Economics, Finance and Chemical Engineering. Lowest risk: Nursing. On average STEM earns most, then Business, then HASS.
+
+## Step 12: Extra credit, what changed since 2008
+
+![Step 12](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/072-data-exploration-with-pandas/raw/branch/main/docs/images/step-12.png)
+
+**What we gained:** PayScale's site is paywalled, so a standard-library scraper reads the Wayback Machine copy (a 2020 snapshot, 350 majors, saved as a CSV so nobody needs the network). Only 23 of the 50 majors share a name in both sets. Technology majors gained most in mid-career pay (Management Information Systems +28.6%, Information Technology +23.1%, Computer Science +20.1%), no compared major fell, and Finance went from rank 14 of 50 to rank 169 of 350.
