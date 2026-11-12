@@ -12,6 +12,8 @@ Kan en uddannelse betale sig? Dette projekt udforsker PayScales løndata efter e
 4. Hvilke studieretninger har lavest risiko? Nursing har den mindste spredning mellem lave og høje indtjeninger.
 5. Tjener Business-, STEM- eller HASS-uddannelser mest? I gennemsnit STEM, derefter Business og til sidst HASS.
 
+Notebooken viser disse svar øverst, lige under titlen.
+
 ## Sider
 
 - [Kom i gang](Getting-Started-da): opret `.venv`, installér, kør notebooken og testene.

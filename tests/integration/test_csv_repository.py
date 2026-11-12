@@ -4,9 +4,13 @@ import shutil
 from pathlib import Path
 
 import nbformat
+import pandas as pd
 import pytest
 from nbclient import NotebookClient
 
+from college_majors.application import lecture_steps as steps
+from college_majors.application.answers import answer_five_questions
+from college_majors.domain import salaries as cols
 from college_majors.infrastructure.csv_repository import default_path, read_data
 
 
@@ -77,3 +81,42 @@ def _assert_five_answers_section(notebook: nbformat.NotebookNode) -> None:
     )
     for expected in ("Physician Assistant", "Nursing", "Economics", "Best-earning group: STEM"):
         assert expected in outputs
+
+
+QUESTIONS = [
+    "Which degrees have the highest starting salaries?",
+    "Which majors have the lowest earnings after college?",
+    "Which degrees have the highest earning potential?",
+    "What are the lowest-risk majors from an earnings standpoint?",
+    "Do Business, STEM or HASS",
+]
+
+
+def test_notebook_states_the_five_answers_on_top(notebook_path: Path) -> None:
+    notebook = nbformat.read(notebook_path, as_version=4)
+    cell = notebook.cells[1]
+
+    assert cell.cell_type == "markdown"
+    assert cell.source.startswith("## The five questions and their answers")
+    assert all(question in cell.source for question in QUESTIONS)
+    assert all(other.cell_type != "code" for other in notebook.cells[:2])
+
+
+def test_notebook_top_answers_match_the_computed_answers(
+    notebook_path: Path, raw_frame: pd.DataFrame
+) -> None:
+    text = nbformat.read(notebook_path, as_version=4).cells[1].source
+    answers = answer_five_questions(steps.clean(raw_frame))
+
+    stated = [
+        answers.highest_starting,
+        answers.lowest_starting,
+        answers.lowest_mid_career,
+        answers.highest_potential,
+        answers.lowest_risk,
+    ]
+    for table in stated:
+        assert table[cols.MAJOR].iloc[0] in text
+    assert answers.best_group in text
+    for number in ("74,300", "210,000", "50,700"):
+        assert number in text

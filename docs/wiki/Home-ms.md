@@ -12,6 +12,8 @@ Adakah ijazah kolej berbaloi? Projek ini meneroka data gaji PayScale selepas uni
 4. Jurusan manakah yang paling rendah risikonya? Nursing mempunyai sebaran terkecil antara pendapatan rendah dan tinggi.
 5. Adakah ijazah Business, STEM atau HASS berpendapatan lebih tinggi? Secara purata STEM, kemudian Business, kemudian HASS.
 
+Buku nota menunjukkan jawapan ini di bahagian atas, tepat di bawah tajuk.
+
 ## Halaman
 
 - [Bermula](Getting-Started-ms): cipta `.venv`, pasang, jalankan buku nota dan ujian.
